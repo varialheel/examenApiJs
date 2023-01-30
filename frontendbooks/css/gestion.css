@@ -1,0 +1,304 @@
+.books {
+  margin: 1rem auto;
+  width: 900px;
+}
+
+.book {
+  display: flex;
+  align-items: top;
+  padding: 1rem;
+  gap: 1rem;
+  color: rgb(4, 74, 112);
+  text-align: justify;
+  border-bottom: 2px solid rgb(218, 218, 218);
+  background-color: transparent;
+  transition: background-color 0.2s;
+}
+
+.book:hover {
+  background-color: rgb(243, 243, 243);
+  border-bottom: 2px solid transparent;
+}
+
+.book__img {
+  width: 170px;
+  height: 220px;
+  /*   object-fit: contain; */
+  display: inline-block;
+}
+
+.book p {
+  margin: 0;
+}
+
+.book__texto {
+  display: inline-block;
+  font-weight: bold;
+  margin: 0.2rem 0;
+  font-size: 1.1rem;
+  font-variant: small-caps;
+
+}
+
+
+.book__btnborrar {
+  display: block;
+  outline: none;
+  border: none;
+  background-color: rgb(4, 74, 112);
+  color: white;
+  font-variant: small-caps;
+  border-radius: 0.2rem;
+  margin: 0.5rem 0;
+  width: 100%;
+  border: 2px solid transparent;
+  padding: 0.25rem 0;
+  font-weight: bold;
+  transition: all 0.2s;
+}
+
+.book__btnborrar:hover {
+  cursor: pointer;
+  color: rgb(4, 74, 112);
+  background-color: transparent;
+  border: 2px solid rgb(4, 74, 112);
+
+}
+
+/* Selects */
+
+.consultas {
+  border-top: 1px solid var(--textColor);
+  border-bottom: 1px solid var(--textColor);
+  display: flex;
+  justify-content: space-evenly;
+  padding: 2rem;
+  margin-bottom: 2rem;
+}
+
+.consultas__selectcategories,
+.consultas__selectauthors,
+.consulta__todos {
+  cursor: pointer;
+  width: 200px;
+  border: none;
+  outline: none;
+  border: 1px solid rgb(4, 74, 112);
+  padding: 0.3rem 0;
+  border-radius: 0.25rem;
+  background-color: var(--backgrounColor);
+  font-weight: bold;
+  color: rgb(4, 74, 112);
+}
+
+.consultas__selectcategories:hover,
+.consultas__selectauthors:hover,
+.consulta__todos:hover {
+  background-color: var(--azulOscuro);
+  color: var(--blanco)
+}
+
+.consultas__selectauthors {
+  width: 300px;
+}
+
+/* Modal */
+
+.modal__buttons {
+  text-align: center;
+}
+
+.modal-container {
+  left: 0;
+  top: -1250px;
+  /* top: 0px; */
+  position: absolute;
+  height: 100vh;
+  width: 100vw;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(4, 74, 112, 0.089);
+  border-radius: 0.25rem;
+}
+
+.modal {
+  /*  height: 200px; */
+  width: 450px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  border-radius: 0.2rem;
+  background-color: var(--azulOscuro);
+  padding: 2rem;
+}
+
+.modal__title {
+  margin-top: 0;
+  margin-bottom: 1rem;
+  color: white;
+  font-variant: small-caps;
+  font-size: 1.75rem;
+  display: block;
+}
+
+.modal__input {
+  width: 100%;
+  padding: 10px 16px;
+  border-radius: 5px;
+  border: none;
+  outline: none;
+  font-size: 1rem;
+  font-weight: bold;
+  margin-bottom: 0.75rem;
+  color:  rgb(4, 74, 112);
+}
+
+.modal__input::placeholder {
+  color: rgb(4, 74, 112);
+}
+
+.modal__buttons {
+  width: 100%;
+}
+
+.modal__button {
+  width: 100%;
+  background-color: #8DA9C4;
+  padding: 0.5rem;
+  color: white;
+  font-weight: bold;
+  font-variant: small-caps;
+  border-radius: 0.12rem;
+  margin-top: 0.5rem;
+  outline: none;
+  border: none;
+  cursor: pointer;
+}
+
+.modal__button--cancelar {
+  background-color: rgb(4, 74, 112);
+
+}
+.modal__select{
+  color: rgb(4, 74, 112);
+}
+
+.modal__select option{
+  color:white;
+  background-color: rgb(4, 74, 112);
+}
+
+.modal__mostrar {
+  animation-name: mostrar;
+  animation-fill-mode: forwards;
+  animation-duration: 0.5s;
+}
+
+@keyframes mostrar {
+  from {
+    opacity: 0;
+    top: -900px;
+  }
+
+  to {
+    opacity: 1;
+    top: 0px;
+    display: none;
+  }
+}
+
+@keyframes recoger {
+  from {
+    opacity: 1;
+    top: 0px;
+  }
+
+  to {
+    opacity: 0;
+    top: -900px;
+  }
+}
+
+.verde {
+  color: greenyellow;
+}
+
+.form {
+  color: var(--blanco);
+  padding: 50px;
+}
+
+.form__title {
+  text-align: center;
+  font-size: 2.75rem;
+  letter-spacing: 0.1rem;
+}
+
+.form__subtitle {
+  text-align: center;
+  font-size: 1.25rem;
+  letter-spacing: 0.025rem;
+}
+
+.form__input {
+  width: 100%;
+  padding: 10px 16px;
+  border-radius: 5px;
+  border: none;
+  outline: none;
+  font-size: 1.25rem;
+  font-weight: bold;
+}
+
+.form__input:focus {
+  background-color: var(--azulOscuro);
+  color: var(--blanco);
+}
+
+.form__input::placeholder {
+  color: var(--azulGris);
+}
+
+.form__label {
+  display: block;
+  font-size: 1.4rem;
+  font-weight: bold;
+  margin: 20px 0;
+}
+
+.form__password {
+  display: inline-block;
+  margin-top: 20px;
+  font-size: 1.25rem;
+  text-align: center;
+  width: 100%;
+  text-decoration: none;
+  color: var(--blanco);
+}
+
+.form__password:hover {
+  color: var(--azulGris);
+}
+
+.form__submit {
+  display: block;
+  width: 100%;
+  padding: 0.5rem;
+  border-radius: 0.25rem;
+  text-align: center;
+  background-color: var(--azulGris);
+  font-size: 1.5rem;
+  font-weight: bold;
+  border: none;
+  margin-top: 1.2rem;
+  color: var(--blanco);
+  transition: background-color 0.3s ease-in-out;
+}
+
+.form__submit:hover {
+  cursor: pointer;
+  background-color: var(--azulOscuro);
+}

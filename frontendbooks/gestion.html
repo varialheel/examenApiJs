@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+  <!-- Styles -->
+  <link href="css/normalize.css" rel="stylesheet" type="text/css" />
+  <link href="css/all.css" rel="stylesheet" type="text/css" />
+  <link href="css/styles.css" rel="stylesheet" type="text/css" />
+  <link href="css/header.css" rel="stylesheet" type="text/css" />
+  <link href="css/gestion.css" rel="stylesheet" type="text/css" />
+
+  <title>Ribera Shopping....</title>
+</head>
+
+<body>
+
+  <header class="header">
+    <section class="header__container">
+      <!-- Menú-->
+      <nav class="nav">
+        <ul class="nav__list">
+          <li class="nav__item">
+            <a href="./index.html" class="nav__link">
+              <i class="fa-solid fa-house-user"></i> Inicio
+            </a>
+          </li>
+          <li class="nav__item">
+            <a href="./stock.html" class="nav__link">
+              <i class="fa-solid fa-dolly"></i> Stock
+            </a>
+          </li>
+          <li class="nav__item">
+            <a href="./gestion.html" class="nav__link">
+              <i class="fa-solid fa-database"></i> Gestión
+            </a>
+          </li>
+          <li class="nav__item">
+            <a href="./usuarios.html" class="nav__link">
+              <i class="fa-solid fa-users"></i> Log Usuarios
+            </a>
+          </li>
+          <li class="nav__item">
+            <a href="#" class="nav__link">
+              <i class="fa-solid fa-right-from-bracket"></i> Salir
+            </a>
+          </li>
+        </ul>
+      </nav>
+    </section>
+  </header>
+  <div class="container">
+    <main class="main">
+      <h1 class="main__title">Gestión - API</h1>
+      <hr>
+
+      <!-- Selects para consultas por categoría y por Autor -->
+      <section>
+        <section class="consultas">
+
+          <!-- Libros por Categoría -->
+          <select id="select_categories" class="consultas__selectcategories ">
+            <option class="" value="" selected disabled>Categorias</option>
+          </select>
+
+          <!-- Libros por Autor -->
+          <select id="select_authors" class="consultas__selectauthors">
+            <option class="" value="" selected disabled>Autores</option>
+          </select>
+
+          <!-- Muestra todos los libros -->
+          <button id="btn_allbooks" class="consulta__todos">Todos</button>
+
+          <!-- Creamos un nuevo libro -->
+          <button id="btn_newbook" class="consulta__todos">Crear</button>
+
+        </section>
+
+        <section class="books" id="books">
+          <!-- Aqui mostramos los libros -->
+        </section>
+
+
+        <section class="modal-container" id="modal_container">
+          <article class="modal">
+            <h2 class="modal__title" id="modal_title">Nuevo Libro</h2>
+            <input class="modal__input" id="modal_input_title" type="text" placeholder="Título">
+
+            <input id="modal_input_author" type="text" class="modal__input" placeholder="Autor">
+
+            <select id="modal_select_category" class="modal__input modal__select"></select>
+
+            <textarea name="" id="modal_input_content" cols="30" rows="10" class="modal__input"
+              placeholder="Descripción"></textarea>
+
+            <button class="modal__button" id="btn_modal_aniadir">Añadir</button>
+
+            <button  class="modal__button modal__button--cancelar" id="btn_modal_cancelar">Cancelar</button>
+
+          </article>
+        </section>
+
+
+    </main>
+  </div>
+
+  <script type="module" src="js/gestion.js"></script>
+</body>
+
+</html>

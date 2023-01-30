@@ -1,0 +1,24 @@
+:root {
+    --azul: #134074;
+    --azulOscuro: #0B2545;
+    --azulGris: #8DA9C4;
+    --blanco: #fff;
+    --fuente: 'Roboto', sans-serif;
+}
+
+* {
+    box-sizing: border-box;
+    font-family: var(--fuente);
+
+}
+
+body {
+    margin: 0px;
+}
+
+.container {
+    max-width: 1200px;
+    width: 100%;
+    margin: 0 auto;
+}
+

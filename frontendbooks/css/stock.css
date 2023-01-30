@@ -1,0 +1,44 @@
+:root {
+  --textColor: rgb(4, 74, 112);
+  --backgrounColor: rgba(128, 128, 128, 0.144);
+}
+
+.tablastock {
+  color: var(--textColor);
+  width: 100%;
+  border-spacing: 10px 5px;
+}
+
+.tablastock tr:hover {
+  font-weight: bold;
+}
+
+.tablastock td {
+  margin-right: 1rem;
+  padding: 0.1rem 0.5rem 0.1rem 0.5rem;
+  font-size: 0.8rem;
+
+  border-bottom: 1px solid;
+  vertical-align: bottom;
+}
+
+.tablastock td:nth-child(1) {
+  vertical-align: top;
+  width: 50%;
+}
+
+.tablastock td:nth-child(2) {
+  vertical-align: top;
+  width: 30%;
+}
+
+.tablastock td:nth-child(3) {
+  vertical-align: top;
+  width: 20%;
+}
+
+.tablastock thead td {
+  padding: 0.25rem 0.25rem;
+  font-weight: bold;
+  font-size: 1.25rem;
+}

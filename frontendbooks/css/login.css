@@ -1,0 +1,113 @@
+body {
+    margin: 0px;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--azulOscuro);
+
+}
+
+.container {
+    max-width: 1200px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+}
+
+.main {
+    width: 40%;
+    height: 600px;
+    border-top-right-radius: 0.5rem;
+    border-bottom-right-radius: 0.5rem;
+    background-color: var(--azul);
+}
+
+.aside {
+    height: 600px;
+    width: 60%;
+    background: url('../assets/images/fondo4.jpg');
+    background-position: center center;
+    background-size: cover;
+    border-top-left-radius: 0.5rem;
+    border-bottom-left-radius: 0.5rem;
+}
+
+.form {
+    color: var(--blanco);
+    padding: 50px;
+}
+
+.form__title {
+    text-align: center;
+    font-size: 2.75rem;
+    letter-spacing: 0.1rem;
+}
+
+.form__subtitle {
+    text-align: center;
+    font-size: 1.25rem;
+    letter-spacing: 0.025rem;
+}
+
+.form__input {
+    width: 100%;
+    padding: 10px 16px;
+    border-radius: 5px;
+    border: none;
+    outline: none;
+    font-size: 1.25rem;
+    font-weight: bold;
+}
+
+.form__input:focus {
+    background-color: var(--azulOscuro);
+    color:var(--blanco)
+}
+
+.form__input::placeholder {
+    color: var(--azulGris);
+}
+
+.form__label {
+    display: block;
+    font-size: 1.4rem;
+    font-weight: bold;
+    margin: 20px 0;
+}
+
+.form__password {
+    display: inline-block;
+    margin-top: 20px;
+    font-size: 1.25rem;
+    text-align: center;
+    width: 100%;
+    text-decoration: none;
+    color: var(--blanco);
+}
+
+.form__password:hover {
+    color: var(--azulGris);
+}
+
+.form__submit {
+    display: block;
+    width: 100%;
+    padding: 0.5rem;
+    border-radius: 0.25rem;
+    text-align: center;
+    background-color: var(--azulGris);
+    font-size: 1.5rem;
+    font-weight: bold;
+    border: none;
+    margin-top: 1.2rem;
+    color: var(--blanco);
+    transition: background-color .3s ease-in-out;
+}
+
+.form__submit:hover {
+    cursor: pointer;
+    background-color: var(--azulOscuro);
+}
